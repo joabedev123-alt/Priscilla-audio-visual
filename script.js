@@ -69,6 +69,35 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', revealOnScroll);
     revealOnScroll(); // Trigger once on load
 
+    // --- Smart Navbar Scroll ---
+    let lastScrollTop = 0;
+    const navbar = document.querySelector('.navbar');
+    const scrollThreshold = 100;
+
+    window.addEventListener('scroll', () => {
+        let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+        // Background change on scroll
+        if (currentScroll > 50) {
+            navbar.classList.add('nav-scrolled');
+        } else {
+            navbar.classList.remove('nav-scrolled');
+        }
+
+        // Hide/Show logic
+        if (currentScroll > lastScrollTop && currentScroll > scrollThreshold) {
+            // Scrolling down - Hide
+            navbar.classList.add('nav-hidden');
+        } else {
+            // Scrolling up - Show
+            navbar.classList.remove('nav-hidden');
+        }
+
+        lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+    });
+
+
+
     // --- Before/After Slider ---
     const slider = document.getElementById('ba-slider');
     const afterImage = document.querySelector('.ba-after');

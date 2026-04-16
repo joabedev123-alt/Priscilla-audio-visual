@@ -1,22 +1,13 @@
-# IDEs and Editors
-.vscode/
-.idea/
-*.swp
-*.swo
-
-# System Files
-Thumbs.db
-.DS_Store
-
-# Claude / Antigravity temporary files
-.claude/
-.gemini/
-*.tmp
-
-# Logs
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+# Dependencies and Build
+node_modules/
+dist/
 
 # Private scripts
 push.bat
+
+# Large Media Files (exceeding 100MB limit for GitHub)
+public/assets/Priscilla 02/cinematic_masterwork.mov
+public/assets/Priscilla 02/photography_portfolio.mp4
+public/assets/videos projeto Priscila/Bradesco Alfaville.MOV
+public/assets/Priscilla 02/lv_0_20251208125824.mp4
+public/assets/videos projeto Priscila/VEDACIT-Legendado.mp4
