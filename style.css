@@ -132,7 +132,7 @@ h1, h2, h3, .syncopate {
     justify-content: center;
     overflow: hidden;
     position: relative;
-    padding-top: 180px; /* Compensa o novo logo maior na navbar */
+    padding-top: 250px; /* Compensa o logo agora com 180px na navbar */
 }
 
 .hero-bg {
