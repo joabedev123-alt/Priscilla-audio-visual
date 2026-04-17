@@ -108,10 +108,10 @@ h1, h2, h3, .syncopate {
 
 /* --- Header / Nav --- */
 .navbar {
-    transition: transform 0.4s ease-in-out, background 0.4s ease-in-out, padding 0.4s ease-in-out;
+    transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out, background 0.4s ease-in-out;
     background: transparent;
     z-index: 1000;
-    height: 100px; /* Altura fixa da barra */
+    min-height: 100px;
     display: flex;
     align-items: center;
 }
@@ -127,7 +127,6 @@ h1, h2, h3, .syncopate {
     padding-bottom: 15px !important;
 }
 
-/* --- Hero Section --- */
 .hero {
     height: 100vh;
     display: flex;
@@ -135,7 +134,7 @@ h1, h2, h3, .syncopate {
     justify-content: center;
     overflow: hidden;
     position: relative;
-    padding-top: 200px; /* Espaço para a logo que transborda */
+    padding-top: 250px; /* Acomoda o logo de 300px centralizado */
 }
 
 .hero-bg {

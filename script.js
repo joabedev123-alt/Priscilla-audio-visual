@@ -77,23 +77,14 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', () => {
         let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
 
-        // Background change on scroll
-        if (currentScroll > 50) {
-            navbar.classList.add('nav-scrolled');
-        } else {
-            navbar.classList.remove('nav-scrolled');
-        }
-
-        // Hide/Show logic
-        if (currentScroll > lastScrollTop && currentScroll > scrollThreshold) {
-            // Scrolling down - Hide
-            navbar.classList.add('nav-hidden');
-        } else {
-            // Scrolling up - Show
+        // Mostrar apenas no topo
+        if (currentScroll < 50) {
             navbar.classList.remove('nav-hidden');
+            navbar.classList.remove('nav-scrolled');
+        } else {
+            navbar.classList.add('nav-hidden');
+            navbar.classList.add('nav-scrolled');
         }
-
-        lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
     });
 
 
