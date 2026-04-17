@@ -7,3 +7,4 @@ push.bat
 
 # Large Media Files - Managed by Git LFS
 # (Removed explicit ignores to allow LFS tracking)
+.vercel
