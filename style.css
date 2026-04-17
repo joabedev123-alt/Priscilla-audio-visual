@@ -459,11 +459,15 @@ p.text-muted {
 }
 
 @media (max-width: 480px) {
-    .hero-title { font-size: 1.8rem !important; letter-spacing: 0.1em; }
-    .navbar-brand img { height: 100px !important; }
-    .footer img { height: 150px !important; }
-    .portfolio-item { height: 300px; }
+    .container, .container-fluid { padding-left: 15px; padding-right: 15px; }
+    .hero-title { font-size: 1.6rem !important; letter-spacing: 0.05em; line-height: 1.2; }
+    .hero-subtitle { font-size: 0.75rem !important; }
+    .navbar-brand img { height: 90px !important; }
+    .btn-premium { padding: 10px 20px; font-size: 0.7rem; }
+    .footer img { height: 140px !important; }
+    .portfolio-item { height: 280px; }
     .ba-container { aspect-ratio: 1 / 1; }
+    .section { padding: 40px 0; }
 }
 
 /* --- Footer --- */
