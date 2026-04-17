@@ -235,16 +235,6 @@
                     </div>
                 </div>
 
-                <!-- Novos Itens da Pasta Priscilla 02 -->
-                <div class="portfolio-item">
-                    <video autoplay muted loop playsinline src="/assets/Priscilla 02/photography_portfolio.mp4" style="width:100%; height:100%; object-fit:cover;">
-                    </video>
-                    <div class="portfolio-overlay">
-                        <span class="syncopate small">Photography</span>
-                        <h4>Modern Portfolio</h4>
-                    </div>
-                </div>
-
                 <div class="portfolio-item">
                     <video autoplay muted loop playsinline src="/assets/Priscilla 02/WhatsApp Video 2025-03-13 at 13.24.47.mp4" style="width:100%; height:100%; object-fit:cover;">
                     </video>
@@ -353,10 +343,14 @@
             <p class="text-muted">Deslize para ver o impacto do nosso Color Grading em produções reais.</p>
         </div>
         <div class="ba-container reveal">
-            <!-- Simulated RAW image with desaturation -->
-            <img src="/assets/Priscilla 02/Sincro S&P.jpg" class="ba-image ba-before" alt="Antes" style="filter: saturate(0.2) contrast(0.8) brightness(0.9);">
-            <!-- Graded image with high saturation and contrast -->
-            <img src="/assets/Priscilla 02/Sincro S&P.jpg" class="ba-image ba-after" alt="Depois" style="filter: saturate(1.4) contrast(1.2) brightness(1.1);"> 
+            <!-- Video RAW (desaturado) -->
+            <video autoplay muted loop playsinline class="ba-image ba-before" style="filter: saturate(0.2) contrast(0.8) brightness(0.9);">
+                <source src="/assets/Priscilla 02/photography_portfolio.mp4" type="video/mp4">
+            </video>
+            <!-- Video Graded (com cor) -->
+            <video autoplay muted loop playsinline class="ba-image ba-after" style="filter: saturate(1.4) contrast(1.2) brightness(1.1);">
+                <source src="/assets/Priscilla 02/photography_portfolio.mp4" type="video/mp4">
+            </video>
             <input type="range" min="0" max="100" value="50" class="ba-slider" id="ba-slider">
         </div>
     </section>

@@ -98,15 +98,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-    // --- Before/After Slider ---
+    // --- Before/After Slider & Video Sync ---
     const slider = document.getElementById('ba-slider');
     const afterImage = document.querySelector('.ba-after');
+    const baVideos = document.querySelectorAll('.ba-container video');
 
     if (slider && afterImage) {
         slider.addEventListener('input', (e) => {
             const val = e.target.value;
             afterImage.style.clipPath = `inset(0 0 0 ${val}%)`;
         });
+    }
+
+    // Sync videos to ensure the comparison is accurate
+    if (baVideos.length === 2) {
+        const syncVideos = () => {
+            if (Math.abs(baVideos[0].currentTime - baVideos[1].currentTime) > 0.1) {
+                baVideos[1].currentTime = baVideos[0].currentTime;
+            }
+        };
+
+        baVideos[0].addEventListener('play', () => baVideos[1].play());
+        baVideos[0].addEventListener('pause', () => baVideos[1].pause());
+        baVideos[0].addEventListener('timeupdate', syncVideos);
     }
 
     // --- Parallax Effect on Hero Img ---
